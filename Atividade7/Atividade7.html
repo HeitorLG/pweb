@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pedra, Papel e Tesoura</title>
+
+    <script>
+        var escolhaUsuario;
+
+        escolhaUsuario = prompt("Escolha Pedra, Papel ou Tesoura");
+        let randomNumber = Math.random().toFixed(2);
+        console.log(escolhaUsuario);
+        switch (escolhaUsuario.toLowerCase()) {
+            case 'Pedra'.toLowerCase():
+                escolhaUsuario = 0.33;
+                console.log(escolhaUsuario);
+                break;
+            case 'Papel'.toLowerCase():
+                escolhaUsuario = 0.66;
+                break;
+            case 'Tesoura'.toLowerCase():
+                escolhaUsuario = 0.99;
+                break;
+            default:
+                alert('Você digitou um valor invalido');
+                escolhaUsuario = undefined;
+                break;
+        }
+
+        if (escolhaUsuario) {
+             if(escolhaUsuario === 0.33 && randomNumber <= 0.33) {
+                alert ('Empate');
+             }
+             if(escolhaUsuario === 0.66 && randomNumber > 0.33 
+                && randomNumber <= 0.66 ) {
+                alert ('Empate');
+             }
+             if(escolhaUsuario === 0.99 && randomNumber > 0.66 
+                && randomNumber <= 0.99 ) {
+                alert ('Empate');
+             }
+
+             if(escolhaUsuario === 0.33 && randomNumber > 0.33 
+                && randomNumber <= 0.66 ) {
+                alert ('Você = Pedra e Maquina = Papel -- #Você Perdeu');
+             }
+
+             if(escolhaUsuario === 0.33 && randomNumber > 0.66 
+                && randomNumber <= 0.99 ) {
+                alert ('Você = Pedra e Maquina = Tesoura -- #Parabéns você ganhou#');
+             }
+
+             if(escolhaUsuario === 0.66 && randomNumber <= 0.33) {
+                alert ('Você = Papel e Maquina = Pedra -- #Parabéns você ganhou#');
+             }
+             if(escolhaUsuario === 0.66 && randomNumber > 0.66 
+                && randomNumber <= 0.99 ) {
+                alert ('Você = Papel e Maquina = Tesoura -- #Você Perdeu');
+             }
+
+             if(escolhaUsuario === 0.99 && randomNumber > 0.33 
+                && randomNumber <= 0.66 ) {
+                alert ('Você = Tesoura e Maquina = Papel -- #Parabéns você ganhou#');
+             }
+
+             if(escolhaUsuario === 0.99 && randomNumber <= 0.33  ) {
+                alert ('Você = Tesoura e Maquina = Pedra -- #Você Perdeu');
+             }
+        } else {
+            alert('Valor Invalido');
+        }
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+</html>

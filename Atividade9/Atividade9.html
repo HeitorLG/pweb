@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 9</title>
+
+    <script>
+
+        var a, b, c;
+        a = prompt('Digite o primiero numero');
+        b = prompt('Digite o segundo numero');
+        c = prompt('Digite o terceiro numero');
+
+        function maiorParaMenor(a, b, c) {
+            var numeros = [],
+            numeros = [a, b, c];
+            numeros.sort();
+
+            return 'Ordenação do maior para o menor: ' + numeros;
+        }
+
+        function maior(a, b, c) {
+            var maior  = Math.max(a,b,c)
+            return 'O maior numero é: ' + maior;
+        }
+
+        alert(maior(a, b, c));
+        alert(maiorParaMenor(a, b, c));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
